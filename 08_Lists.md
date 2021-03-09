@@ -220,7 +220,7 @@ print(newlist)
 
 ###  Syntax
 
-newlist = [expression for item in iterable if condition == True]
+newlist = [expression for item in iterable if condition == True]<br>
 **Condition** => The condition is like a filter that only accepts the items that valuate to True.<br>
 **Iterable**  => The iterable can be any iterable object, like a list, tuple, set etc.<br>
 **Expression** => The expression is the current item in the iteration, but it is also the outcome, 
@@ -246,4 +246,93 @@ thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
 thislist.sort(reverse = True)
 print(thislist)
 ~~~
+
+### Customize Sort Function
+You can also customize your own function by using the keyword argument key = function.
+~~~
+def myfunc(n):
+  return abs(n - 50)
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist)
+~~~
+
+### Case Insensitive Sort
+~~~
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key = str.lower)
+print(thislist)
+~~~
+
+### Reverse Order
+~~~
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
+print(thislist)
+~~~
+
+## Copy a List
+You cannot copy a list simply by typing list2 = list1, 
+because: list2 will only be a reference to list1, 
+and changes made in list1 will automatically also be made in list2.
+There are ways to make a copy, one way is to use the built-in List method copy().
+~~~
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+~~~
+
+Another way to make a copy is to use the built-in method list().
+~~~
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+~~~
+
+## Join Lists
+There are several ways to join, or concatenate, two or more lists in Python.
+One of the easiest ways are by using the + operator.
+~~~
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3)
+~~~
+
+Another way to join two lists are by appending all the items from list2 into list1, one by one:
+~~~
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+for x in list2:
+  list1.append(x)
+print(list1)
+~~~
+
+you can use the extend() method, which purpose is to add elements from one list to another list:
+~~~
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+list1.extend(list2)
+print(list1) 
+~~~
+
+## List Methods
+
+### count()
+Return the number of times the value "cherry" appears in the fruits list:
+~~~
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.count("cherry") => 1
+~~~
+
+### index()
+What is the position of the value "cherry":
+~~~
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.index("cherry")  => 2 
+~~~
+
+
+
+
 
