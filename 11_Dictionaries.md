@@ -106,3 +106,151 @@ print(x) #before the change
 car["year"] = 2020
 print(x) #after the change 
 ~~~
+
+
+## Check if Key Exists
+
+To determine if a specified key is present in a dictionary use the in keyword:
+
+~~~
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+if "model" in thisdict:
+  print("Yes, 'model' is one of the keys in the thisdict dictionary") 
+~~~
+
+## Change Dictionary Items
+You can change the value of a specific item by referring to its key name:
+~~~
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["year"] = 2018
+~~~
+
+### Update()
+the update() method will update the dictionary with the items from the given argument.
+~~~
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+~~~
+
+### Adding items
+~~~
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["sdf"]="dsaff"
+print(thisdict)
+~~~
+
+## Removing Items
+
+### pop()
+The pop() method removes the item with the specified key name:
+~~~
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict) 
+~~~
+### popitem()
+
+The popitem() method removes the last inserted item 
+(in versions before 3.7, a random item is removed instead):
+~~~
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.popitem()
+print(thisdict) 
+~~~
+
+### del
+
+The del keyword removes the item with the specified key name:
+~~~
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict["model"]
+print(thisdict) 
+~~~
+
+The del keyword can also delete the dictionary completely:
+~~~
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict
+print(thisdict) #this will cause an error because "thisdict" no longer exists. 
+~~~
+### clear()
+
+the clear() method empties the dictionary:
+~~~
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.clear()
+print(thisdict) 
+~~~
+
+
+## Loop Dictionaries
+You can loop through a dictionary by using a for loop.
+When looping through a dictionary, 
+the return value are the keys of the dictionary, 
+but there are methods to return the values as well.
+~~~
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+# for keys in the dictionaries
+for x in thisdict:
+  print(x) 
+  
+# for values in the dictionaries
+for x in thisdict:
+  print(thisdict[x]) 
+ 
+# for values
+for x in thisdict.values():
+  print(x) 
+  
+# for keys 
+for x in thisdict.keys():
+  print(x) 
+  
+# Loop through both keys and values, by using the items() method:
+for x, y in thisdict.items():
+  print(x, y) 
+  
+~~~
+
+
