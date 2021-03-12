@@ -1,3 +1,3 @@
-#If and Else
+# If and Else
 
-##Python Conditions and If statements
+## Python Conditions and If statements
