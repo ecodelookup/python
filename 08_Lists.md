@@ -56,10 +56,11 @@ print(thislist[-4:-1]) # 4th last to end
 
 ## Check if Item Exists
 To determine if a specified item is present in a list use the in keyword:
+~~~
 thislist = ["apple", "banana", "cherry"]
 if "apple" in thislist:
   print("Yes, 'apple' is in the fruits list") 
-  
+~~~
 ## Change Item Value
 
 To change the value of a specific item, refer to the index number:
